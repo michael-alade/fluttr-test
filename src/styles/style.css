@@ -1,7 +1,7 @@
 body {
     margin: 0px;
     background-size: cover;
-    background-image: url('../images/starwars.jpg')
+    background-image: url('../assets/images/starwars.jpg')
 }
 
 .facebook {
@@ -9,4 +9,105 @@ body {
     border: 1px solid;
     height: 50px;
     
+}
+
+.start {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.orange-btn {
+    background-color: #f79632;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer
+}
+
+.orange-btn:hover {
+    color: #fff;
+}
+
+.blue-btn {
+    background-color: #2cb5f1;
+}
+
+.btn {
+    width: 100
+}
+
+.btn-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* text classes */
+.text-green {
+    color: #9ab34c;
+}
+
+.text-white {
+    color: #fff;
+}
+
+.text-blue {
+    color: #24a8f0;
+}
+
+.text-red {
+    color: #cd503f;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-xl {
+    font-size: 5.5rem;
+}
+
+/* .col-md-4 {
+    border: 1px solid;
+} */
+
+.vehicle-box {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.vehicle-box img {
+    width: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.score-box {
+    padding-top: 40px;
+}
+
+.score-box .score {
+    padding-top: 30px;
+}
+
+.gold-box {
+    display: flex;
+}
+
+.gold-box .gold-img {
+    flex: 1;
+    width: 180px !important;
+}
+.gold-box .gold-weight {
+    flex: 1;
+    padding-top: 40px;
+}
+
+.gold-box .gold-img img {
+    width: 96px;
+    height: 112px;
+    float: right;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    display: block;
+    flex: 1;
 }
