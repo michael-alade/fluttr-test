@@ -50,26 +50,32 @@ const starWars = (state = initialState, action) => {
       // conditional statements to pick out the winner
       if (!action.result.player1.totalTime && action.result.player2.totalTime) {
         winner = `${state.player2.name} won the game`;
-        score[2] = state.playersScore[2] + 1;
+        score[2] = 1;
+        score[1] = 0
       } else if (action.result.player1.totalTime && !action.result.player2.totalTime) {
         winner = `${state.player1.name} won the game`;
-        score[1] = state.playersScore[1] + 1;
+        score[1] = 1;
+        score[2] = 0
       } else if (
         action.result.player1.totalTime && 
         action.result.player2.totalTime &&
         action.result.player1.totalTime === action.result.player2.totalTime
       ) {
-        score[1] = state.playersScore[1] + 1;
-        score[2] = state.playersScore[2] + 1;
+        score[1] = 1;
+        score[2] = 1;
         winner = `${state.player1.name} and ${state.player2.name} got a tie`;
       } else if (action.result.player1.totalTime > action.result.player2.totalTime) {
         winner = `${state.player2.name} won the game`;
-        score[2] = state.playersScore[2] + 1;
+        score[2] = 1;
+        score[1] = 0
       } else if (action.result.player1.totalTime < action.result.player2.totalTime) {
         winner = `${state.player1.name} won the game`;
-        score[1] = state.playersScore[1] + 1;
+        score[1] = 1;
+        score[2] = 0
       } else {
         winner = 'No one won the match'
+        score[1] = 0;
+        score[2] = 0;
       }
 
       return Object.assign({}, state, { 
@@ -81,9 +87,5 @@ const starWars = (state = initialState, action) => {
       return state;
   }
 };
-
-// const rootReducer = combineReducers({
-//   starWars
-// });
 
 export default starWars;
