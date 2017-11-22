@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "./node_modules/.bin/webpack-dev-server --content-base ./dev.server.js"
+    "dev": "./node_modules/.bin/webpack-dev-server --content-base ./dev.server.js",
+    "build": "NODE_ENV=production node ./build.js",
+    "deploy": "./node_modules/.bin/firebase deploy",
+    "build:deploy": "npm run build && npm run deploy"
   },
   "repository": {
     "type": "git",
